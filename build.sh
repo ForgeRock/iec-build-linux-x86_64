@@ -42,8 +42,8 @@ rm -rf ${dist_dir} && mkdir -p ${dist_dir}
 go get -u -d -t stash.forgerock.org/iot/identity-edge-controller-core/...
 
 # Set the version and platform information variables
-source ${src_dir}/version/version.txt
 source ${src_dir}/version/platform-linux-x86_64.txt
+source ${src_dir}/version/version.txt
 
 # If IEC_CORE_SRC is set then prepend it to GOPATH before building the IEC components
 # We create a symbolic link in order to add the full project path to the GOPATH
