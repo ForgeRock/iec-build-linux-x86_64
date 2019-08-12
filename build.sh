@@ -83,6 +83,6 @@ tar -czf ${dist_dir}/iec-service-${PLATFORM}-${TRUST}-${VERSION_NUMBER}.tgz \
 # Create a tarball that contains all the files required to install the IEC C SDK
 tar -czf ${dist_dir}/iec-sdk-${PLATFORM}-${TRUST}-${VERSION_NUMBER}.tgz \
     -C ${bin_dir} iecutil \
-    -C ${src_dir}/cmd/iecsdk/deploy examples sdk-config.json \
+    -C ${src_dir}/cmd/iecsdk/deploy examples sdk-config.json build-examples.sh run-examples.sh \
     -C ${root_dir}/build lib include \
     -C ${bin_dir} examples
