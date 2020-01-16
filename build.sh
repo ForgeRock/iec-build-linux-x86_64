@@ -2,7 +2,7 @@
 set -e
 
 #
-# Copyright 2019 ForgeRock AS
+# Copyright 2019-2020 ForgeRock AS
 #
 #  Licensed under the Apache License, Version 2.0 (the "License");
 #  you may not use this file except in compliance with the License.
@@ -72,6 +72,8 @@ cp ${src_dir}/cmd/iecsdk/libiectypes.h ${inc_dir}
 mkdir -p ${bin_dir}/examples/simpleclient
 /usr/bin/x86_64-linux-gnu-gcc ${src_dir}/cmd/iecsdk/deploy/examples/simpleclient/simpleclient.c \
     -o ${bin_dir}/examples/simpleclient/simpleclient -I${inc_dir} -L${lib_dir} -liecclient -lsodium -lzmq
+go build -ldflags "${VERSION_INFO}" -tags 'logicrichos securerichos' -o ${bin_dir}/examples/x509client/x509client \
+    stash.forgerock.org/iot/identity-edge-controller-core/cmd/iecsdk/deploy/examples/x509client
 
 # Create a tarball that contains all the files required to install the IEC Service
 tar -czf ${dist_dir}/iec-service-${PLATFORM}-${TRUST}-${VERSION_NUMBER}.tgz \
