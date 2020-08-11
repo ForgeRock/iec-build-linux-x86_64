@@ -1,3 +1,5 @@
+#### This repository is no longer maintained or supported by ForgeRock and the software hosted here is not compatible with ForgeRock Platform 7.0.0 and beyond. The software hosted here has been replaced by [ForgeRock Things](https://github.com/ForgeRock/iot-edge) for ForgeRock Platform 7.0.0.
+
 # IEC Build - Linux, x86_64, RichOS
 
 This repository contains the Identity Edge Controller build environment for Linux x86_64 on RichOS platform. It builds
